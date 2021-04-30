@@ -1,0 +1,14 @@
+factor -> digit | ( expr )
+
+term ->   term * factor
+		| term \ factor
+		| factor
+
+expr ->   expr + term
+		| expr - term
+		| term
+
+
+expr -> expr + term | expr - term | term
+term -> term * factor | term / factor | factor
+factor -> digit | ( expr )
